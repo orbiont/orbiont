@@ -17,14 +17,15 @@
         let state;
         switch (config) {
             case THEMES.DARK:
-                state = THEMES.DARK;
+                //state = THEMES.DARK;
+                state = THEMES.LIGHT;
                 break;
             case THEMES.LIGHT:
                 state = THEMES.LIGHT;
                 break;
             case THEMES.AUTO:
             default:
-                state = window.matchMedia("(prefers-color-scheme: dark)")
+                state = window.matchMedia("(prefers-color-scheme: light)")
                     .matches
                     ? THEMES.DARK
                     : THEMES.LIGHT;
