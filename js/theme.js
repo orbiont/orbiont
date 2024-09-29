@@ -4,7 +4,7 @@
     const THEMES = {
         LIGHT: "light",
         DARK: "dark",
-        AUTO: "auto",
+        AUTO: "light",
     };
 
     const body = document.body;
@@ -54,8 +54,10 @@
             localStorage.setItem(LS_THEME_KEY, THEMES.LIGHT);
             initTheme(THEMES.LIGHT);
         } else if (state === THEMES.LIGHT) {
-            localStorage.setItem(LS_THEME_KEY, THEMES.DARK);
-            initTheme(THEMES.DARK);
+            //localStorage.setItem(LS_THEME_KEY, THEMES.DARK);
+            localStorage.setItem(LS_THEME_KEY, THEMES.LIGHT);
+            //initTheme(THEMES.DARK);
+            initTheme(THEMES.LIGHT);
         }
     };
 
