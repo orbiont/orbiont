@@ -17,8 +17,7 @@
         let state;
         switch (config) {
             case THEMES.DARK:
-                //state = THEMES.DARK;
-                state = THEMES.LIGHT;
+                state = THEMES.DARK;
                 break;
             case THEMES.LIGHT:
                 state = THEMES.LIGHT;
@@ -36,8 +35,10 @@
 
     const initTheme = (state) => {
         if (state === THEMES.DARK) {
-            document.documentElement.classList.add(THEMES.DARK);
-            document.documentElement.classList.remove(THEMES.LIGHT);
+            //document.documentElement.classList.add(THEMES.DARK);
+            //document.documentElement.classList.remove(THEMES.LIGHT);
+            document.documentElement.classList.remove(THEMES.DARK);
+            document.documentElement.classList.add(THEMES.LIGHT);
         } else if (state === THEMES.LIGHT) {
             document.documentElement.classList.remove(THEMES.DARK);
             document.documentElement.classList.add(THEMES.LIGHT);
